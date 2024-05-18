@@ -20,9 +20,7 @@ msp432代码：
 
 ##### 定时器(tim32.c)
 msp432中定时器使用tim32定时器，fclk的频率是48MHZ，根据公式
-$$
-T_{timer32} = \dfrac{CLKDIV * (ARR + 1)} { f_{clk}} 
-$$
+$$T_{timer32} = \dfrac{CLKDIV * (ARR + 1)} { f_{clk}}$$
 我这里选择是 10ms的中断，没有分频，CLKDIV=1，ARR=480000-1.
 接下来就是在中断函数T32_INT1_IRQHandler() 中写程序了。
 ##### 串口(usart3.c)
